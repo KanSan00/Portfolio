@@ -19,6 +19,11 @@ body {
 .nav {
   display: flex;
   justify-content: flex-end;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 60px;
+  z-index: 100;
 }
 
 .drawer_open {
@@ -28,7 +33,7 @@ body {
   justify-content: center;
   align-items: center;
   position: relative;
-  z-index: 100;/* 重なり順を一番上にする */
+  z-index: 101; /* 重なり順を一番上にする */
   cursor: pointer;
 }
 
@@ -78,16 +83,23 @@ body {
   height: 100%;
   position: fixed;
   top: 0;
-  right: 100%; /* 右側へ隠す */
+  right: -100%; /* 右側へ隠す */
   left: auto;
   z-index: 99;
+  /* background: rgba(255,255,255,0.5); */
   background: #fff;
-  transition: .5s;
+  transition: 0.5s;
 }
 
 /* メニュー黒ポチを消す */
 .nav_list {
   list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 0;
+  font-size: 36px;
 }
 
 /* アイコンがクリックされたらメニューを表示 */

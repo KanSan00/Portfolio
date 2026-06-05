@@ -12,10 +12,7 @@
   </head>
 
   <body>
-    
-    <div class="container">
-      <header>
-            <!-- ハンバーガーメニュー部分 -->
+       <!-- ハンバーガーメニュー部分 -->
           <div class="nav">
             <!-- ハンバーガーメニューの表示・非表示を切り替えるチェックボックス -->
             <input id="drawer_input" class="drawer_hidden" type="checkbox">        <!-- ハンバーガーアイコン -->
@@ -31,7 +28,9 @@
               </ul>
             </nav>
           </div>
-
+          
+    <div class="container">
+      <header>
         <div class="tab">
           <h1>PORTFOLIO</h1>
         </div>
@@ -235,6 +234,13 @@
           ],
         });
       });
+    </script>
+
+    <script>
+        // ハンバーガーメニューのリンクをクリックしたら閉じる
+        $(".nav_content a").on("click", function () {
+          $("#drawer_input").prop("checked", false);
+        });  
     </script>
   </body>
 </html>
